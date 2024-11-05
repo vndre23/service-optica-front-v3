@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  p-calendar input {
+    @apply border p-2
+  }
+  .small-calendar .p-datepicker {
+
+
+
+     @apply border scale-75 origin-top-right ml-[-15%] sm:ml-[-13%] md:ml-[-13%]
+}
+
+.small-calendar .p-datepicker-header {
+    padding: 0.3rem 0.5rem; /* Ajusta el espaciado del encabezado */
+}
+
+.small-calendar .p-datepicker td,
+.small-calendar .p-datepicker th {
+    @apply px-0.5 py-0.5 /* Reduce el espacio en las celdas */
+}
+}

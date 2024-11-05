@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-outline-purple {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-purple-600 hover:text-white border border-purple-600 hover:bg-purple-600 focus:ring-purple-300
+  }
+  .btn-outline-indigo {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-indigo-600 hover:text-white border border-indigo-600 hover:bg-indigo-600 focus:ring-indigo-300
+  }
+  .btn-outline-primary {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-blue-600 hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-blue-300
+  }
+  .btn-outline-danger {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-red-600 hover:text-white border border-red-600 hover:bg-red-600 focus:ring-red-300
+  }
+  .btn-outline-success {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-green-600 hover:text-white border border-green-600 hover:bg-green-600 focus:ring-green-300
+  }
+  .btn-outline-orange {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-orange-600 hover:text-white border border-orange-600 hover:bg-orange-600 focus:ring-orange-300
+  }
+  .btn-outline-warning {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-yellow-600 hover:text-white border border-yellow-600 hover:bg-yellow-600 focus:ring-yellow-300
+  }
+  .btn-outline-sky {
+    @apply focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none text-sky-600 hover:text-white border border-sky-600 hover:bg-sky-600 focus:ring-sky-300
+  }
+}

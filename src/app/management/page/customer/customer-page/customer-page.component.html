@@ -1,0 +1,23 @@
+<div class="p-5">
+  <div class="mt-2 mb-5">
+    <h1 class="font-semibold text-2xl">Modulo de Clientes</h1>
+  </div>
+  <div class="mb-5">
+    <button class="btn-purple" (click)="showDialog()">
+      <i class="fa-solid fa-user-plus"></i>
+      <span class="ml-2">Agregar</span>
+    </button>
+  </div>
+  <app-customer-table (onUpdate)="onUpdate($event)" [customers]="customers" (onConfirm)="onConfirm($event)"></app-customer-table>
+
+</div>
+
+<p-dialog header="Crear Cliente" [modal]="true" [(visible)]="visible" styleClass="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[50%]" (onHide)="onHide()">
+  <app-customer-form (onCloseModal)="onHide()" [typeDocuments]="typeDocuments" (onSave)="save()" [form]="form"></app-customer-form>
+</p-dialog>
+
+<p-dialog [modal]="true" [(visible)]="visibleConfirm" styleClass="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[40%]" (onHide)="onHide()">
+  <app-confirm-dialog (onAccept)="onDelete()" (onReject)="onHideConfirm()"></app-confirm-dialog>
+</p-dialog>
+
+

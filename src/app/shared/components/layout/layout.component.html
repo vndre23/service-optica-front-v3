@@ -1,0 +1,12 @@
+<app-navbar (emitIsViewSidebar)="onClickViewSidebar()"></app-navbar>
+<app-sidebar [isViewSidebar]="isViewSidebar"></app-sidebar>
+
+<div [class]="isViewSidebar ?
+  'p-4 sm:ml-64':
+  'p-4 '">
+  <div class="p-4 border border-gray-300 rounded-lg dark:border-gray-700 mt-20 bg-white">
+    <ng-content></ng-content>
+  </div>
+
+
+</div>

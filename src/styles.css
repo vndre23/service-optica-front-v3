@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+/* personalizados */
+@import './styles/buttons.css';
+@import './styles/buttons-outline.css';
+@import './styles/buttons-outline-rounded.css';
+@import './styles/dropdown.css';
+@import './styles/forms.css';
+@import './styles/calendar.css';
+@import './styles/badges.css';

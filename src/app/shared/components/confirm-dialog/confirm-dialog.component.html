@@ -1,0 +1,17 @@
+
+  <div class="flex flex-col items-center surface-overlay rounded bg-white">
+    <div class="rounded-full bg-green-600 inline-flex justify-center items-center h-24 w-24">
+      <i class="fa-solid fa-circle-check text-7xl text-white"></i>
+    </div>
+    <span class="font-bold text-2xl block mb-2 mt-4">
+        {{ header }}
+    </span>
+    <p class="mb-0">{{ message }}</p>
+    <div class="flex items-center gap-2 mt-4">
+        <button class="w-32 btn-success" (click)="onClickAccept()">Aceptar</button>
+        <button
+            label="Cancel"
+            (click)="onClickReject()"
+            class="btn-outline-danger w-32" >Cancelar</button>
+    </div>
+</div>

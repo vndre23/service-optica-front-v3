@@ -1,0 +1,68 @@
+<form class="px-2" [formGroup]="form" (submit)="save()">
+  <div class="md:grid md:grid-cols-2 md:gap-4">
+    <div class="form-label-input mt-3">
+      <label class="form-label">Tipo Documento</label>
+      <p-dropdown
+          [options]="typeDocuments"
+          optionLabel="name"
+          placeholder="Tipo Documento"
+          panelStyleClass=""
+          styleClass="w-full"
+          class=""
+          formControlName="typeDocument"
+           />
+    </div>
+    <div class="form-label-input mt-3">
+      <label class="form-label">Número Documento</label>
+      <input type="text" class="form-input w-full" placeholder="Número Documento" formControlName="numberDocument">
+
+    </div>
+  </div>
+  <div class="md:grid md:grid-cols-2 md:gap-4">
+    <div class="form-label-input mt-3">
+      <label class="form-label">Nombres</label>
+      <input type="text" [class]="isValidField('name') ?'form-input w-full border-red-600' :'form-input w-full'" placeholder="Nombres" formControlName="name">
+      <p *ngIf="isValidField('name')" class="text-xs text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{getFieldError('name')}}</p>
+    </div>
+    <div class="form-label-input mt-3">
+      <label class="form-label">Apellidos</label>
+      <input type="text" [class]="isValidField('lastname') ?'form-input w-full border-red-600' :'form-input w-full'" placeholder="Apellidos" formControlName="lastname">
+      <p *ngIf="isValidField('lastname')" class="text-xs text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{getFieldError('lastname')}}</p>
+    </div>
+  </div>
+  <div class="md:grid md:grid-cols-2 md:gap-4">
+    <div class="form-label-input mt-3">
+      <label class="form-label">Telefono</label>
+      <input type="text" class="form-input w-full" placeholder="Telefono" formControlName="phone">
+    </div>
+    <div class="form-label-input mt-3">
+      <label class="form-label">Email</label>
+      <input type="text" class="form-input w-full" placeholder="Email" formControlName="email">
+    </div>
+  </div>
+  <div class="md:grid md:grid-cols-2 md:gap-4">
+    <div class="form-label-input mt-3">
+      <label class="form-label">Fecha Nacimiento</label>
+       <p-calendar formControlName="date" dateFormat="dd/mm/yy" class="small-calendar w-full" styleClass="w-full" placeholder="Fecha nacimiento" formControlName="birthdate"/>
+    </div>
+    <div class="form-label-input mt-3">
+      <label class="form-label">Edad</label>
+      <input type="number" class="form-input w-full" placeholder="Edad" readonly [value]="calculateAge()">
+    </div>
+  </div>
+  <div class="mt-3 flex justify-between sm:block">
+    <button type="submit" class="btn-success sm:w-[20%] inline-flex items-center justify-center">
+      <i class="fa-solid fa-floppy-disk"></i>
+      <span class="ml-2">Guardar</span>
+    </button>
+    <button (click)="onClickCloseModal()" type="button" class="btn-danger sm:w-[20%] inline-flex items-center justify-center">
+      <i class="fa-solid fa-xmark"></i>
+      <span class="ml-2">Cancelar</span>
+    </button>
+  </div>
+
+
+
+
+
+</form>
